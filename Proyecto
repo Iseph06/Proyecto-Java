@@ -1,0 +1,45 @@
+package proyecto;
+
+import java.util.Scanner;
+
+public class Proyecto {
+
+    public static void main(String[] args) {
+        //Se declaran variables
+        int numero = 0;
+        String tratamiento = "";
+        String nombreCliente = "";
+        Scanner scanner = new Scanner(System.in);
+        
+        //Se introduce el nombre y el menu
+        System.out.println("Digite el nombre del cliente: ");
+        nombreCliente = scanner.nextLine();
+        System.out.println("A continuacion seleccione el tratamiento de " + nombreCliente);
+        System.out.println("Tratamientos: ");
+        System.out.println("1. Blower ");
+        System.out.println("2. Keratina ");
+        System.out.println("3. Corte de pelo ");
+        System.out.println("4. Salir ");
+        System.out.println("Digite el numero del tratamiento que desea: ");
+        numero = scanner.nextInt();
+        
+        //Se realiza el analisis de la entrada con el tratamiento
+        switch (numero) {
+            case 1:
+                System.out.println("El tratamiento seleccionado es Blower");
+                break;
+            case 2:
+                System.out.println("El tratamiento seleccionado es Keratina");
+                break;
+            case 3:
+                System.out.println("El tratamiento seleccionado es Corte de pelo");
+                break;
+            case 4:
+                System.out.println("Salir");
+                break;
+            default:
+                System.out.println("Por favor digite un numero de tratamiento valido");
+
+        }
+    }
+}
